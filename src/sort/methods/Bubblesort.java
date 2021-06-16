@@ -15,7 +15,7 @@ public class Bubblesort implements ISortStrategy
 {
 
     @Override
-    public double[] Sortuj(double[] tab) {
+    public void Sortuj(double[] tab) {
         
         int n = tab.length;
         for (int i = 0; i < n-1; i++)
@@ -26,7 +26,6 @@ public class Bubblesort implements ISortStrategy
                     tab[j] = tab[j+1];
                     tab[j+1] = temp;
                 }
-    return tab; 
     }
 
 

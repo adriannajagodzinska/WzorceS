@@ -16,9 +16,8 @@ public class Quicksort implements ISortStrategy
     /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-szybkie-quicksort/quick-j.html */
 
     @Override
-    public double[] Sortuj(double[] tab) {
+    public void Sortuj(double[] tab) {
         quicksort(tab,0, tab.length-1);
-    return tab;
     }
     
     private static void quicksort(double[] tab, int x, int y) {

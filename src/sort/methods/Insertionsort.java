@@ -15,7 +15,7 @@ public class Insertionsort implements ISortStrategy
 {
 
     @Override
-    public double[] Sortuj(double[] tab) {
+    public void Sortuj(double[] tab) {
         int n = tab.length;
         for (int i = 1; i < n; ++i) {
             double key = tab[i];
@@ -28,7 +28,6 @@ public class Insertionsort implements ISortStrategy
         
             tab[j + 1] = key;   
         }
-    return tab;   
     }
 
     

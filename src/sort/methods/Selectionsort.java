@@ -15,7 +15,7 @@ public class Selectionsort implements ISortStrategy
 {
 
     @Override
-    public double[] Sortuj(double[] tab) {
+    public void Sortuj(double[] tab) {
         int n = tab.length;
  
         for (int i = 0; i < n-1; i++)
@@ -31,7 +31,6 @@ public class Selectionsort implements ISortStrategy
         }
         double n1;
          n1 = tab.length;
-        return tab;
     }
     
 }
