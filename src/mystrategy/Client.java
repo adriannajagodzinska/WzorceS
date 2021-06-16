@@ -6,6 +6,13 @@
 package mystrategy;
 
 import data.DataGenerator;
+import java.util.Scanner;
+import sort.methods.Bubblesort;
+import sort.methods.Insertionsort;
+import sort.methods.Quicksort;
+import sort.methods.Selectionsort;
+import sort.strategy.Context;
+import sort.strategy.ISortStrategy;
 
 /**
  *
@@ -23,11 +30,29 @@ public class Client {
         
         double[] dataNonSort = DataGenerator.generate(100000);
         
+        Context bubblesort = new Context(new Bubblesort());
+        long bubblestart = System.currentTimeMillis();
+	bubblesort.Sort(dataNonSort);
+	long bubblestop = System.currentTimeMillis();
+	System.out.println("Bubblesort: " + (bubblestop - bubblestart) + " ms");
         
+        Context insertionsort = new Context(new Insertionsort());
+        long insertstart = System.currentTimeMillis();
+	insertionsort.Sort(dataNonSort);
+	long insertstop = System.currentTimeMillis();
+	System.out.println("Insertionsort: " + (insertstop - insertstart) + " ms");
         
-       /* Wzorzec Stratega */
-        //...
-       
-        System.out.println("Time: ??");
+        Context quicksort = new Context(new Quicksort());
+        long quickstart = System.currentTimeMillis();
+	quicksort.Sort(dataNonSort);
+	long quickstop = System.currentTimeMillis();
+	System.out.println("Quicksort: " + (quickstop - quickstart) + " ms");
+        
+        Context selectionsort = new Context(new Selectionsort());
+        long selectionstart = System.currentTimeMillis();
+	selectionsort.Sort(dataNonSort);
+	long selectionstop = System.currentTimeMillis();
+	System.out.println("Selectionsort: " + (selectionstop - selectionstart) + " ms");
+   
     }
 }
