@@ -28,6 +28,22 @@ public class Client {
         /* Algorytmy sortowania */
         // http://www.algorytm.org/algorytmy-sortowania/
         
+//        PYTANIA
+//
+//1. Proszę o podanie głównego celu zastosowania wzorca strategii.
+// Odpowiedź: Głównym celem zastosowania wzorca strategii jest to, że minimalizuje się kod oraz fakt, że
+//można dołożyć kolejny typ strategii bez konieczności zmiany całego kodu.
+//
+//2. Czy istnieje możliwość zmiany algorytmu w czasie działania programu?
+// Odpowiedź: Tak w trakcie działania alogorytmu możliwa jest zmiana strategii. Np gdybyśmy posiadali aplikację okienkową, w której
+// należy wybrać sposób strategii możliwa byłaby jej zmiana.
+//3. W jaki sposób wzorzec enkapsuluje poszczególne algorytmy?
+// Odpowiedź: Wzorzec enkapsulowano poprzez utworzenie interfejsu ISortStrategy, po którym metody sortowanai dziedziczą. Wobec tego najbardziej 
+// zewnętrzny jest interfejs, a metody sortowanai są dostępne tylko dla niego.
+//4. Kiedy stosować wzorzec strategii?
+// Odpowiedź: Wzorzec strategii można stosować kiedy mamy kilka możliwych rozwiązań tego samego problemu - np. wywołując zdjęcie mamy możliwość
+// wywołania go w kolorze (strategia pierwsza) lub wywołać go w monochromie (strategia druga).
+        
         double[] dataNonSort = DataGenerator.generate(100000);
         
         Context bubblesort = new Context(new Bubblesort());
